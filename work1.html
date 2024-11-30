@@ -11,7 +11,7 @@
   <style>
     body {
       background-color: #8a8a8a;
-      animation: rgbFlash 15s infinite;
+
     }.quiz-card {
       margin-bottom: 15px;
       padding: 20px;
@@ -28,35 +28,26 @@
       background-color: #cccccc;
     }.testBox {
       background-color: #8a8a8a;
-      margin-bottom: 1%;
-      border-radius: 10px;
+      width: auto;
+
+    }.title {
+      font-size: 30px;
+      background-color: #000000;
+      border-radius: 8px;
+      color: #ffffff;
+      border: #ffffff solid;
+      padding: 5%;
+      max-width: 800;
     }
     
-  @keyframes rgbFlash {
-    0% {
-      background-color: rgb(255, 0, 0); 
-    }
-    25% {
-      background-color: rgb(0, 255, 0); 
-    }
-    50% {
-      background-color: rgb(0, 0, 255); 
-    }
-    75% {
-      background-color: rgb(255, 255, 0); 
-    }
-    100% {
-      background-color: rgb(255, 0, 255); 
-    }
-  }
   </style>
 </head>
 
 <body>
 
   <div class="container mt-5">
-    <div class="container-fluid p-5 text-white text-center testBox" id="testBox">
-      <h1>แบบทดสอบ ม.1</h1>
+    <div class="container-fluid text-center testBox" id="testBox">
+      <h1 class="title">แบบทดสอบ ม.1</h1>
       <button class="btn btn-primary btn-start" id="btnStart">เริ่มทำแบบทดสอบ</button>
     </div>
     <div id="quizBox" class="row d-none">
@@ -100,7 +91,7 @@
     function displayQuiz(i, q) {
       let no = parseInt(i) + 1;
       let card = `
-      <div class="quiz-card">
+      <div class="quiz-card mx-auto">
         <h5>ข้อที่ ${no}</h5>
         <p>${q.title}</p>
         ${q.options.map((option, index) => `
@@ -145,10 +136,10 @@
       $("#quizBox").hide();
 
       let resultsHtml = `
-        <div class="mt-5">
+        <div class="mt-2">
            <style>
     body {
-      background-color: #f7f7f7;
+      background-color: #8a8a8a;
     }
     .btn-retry {
       margin-top: 3%;
