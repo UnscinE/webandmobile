@@ -1,7 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-  <title>Wellcome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to my work space. This is a very long title that needs to scroll smoothly.</title>
   <link rel="icon" type="image/png" href="/image/weblogo.png">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const originalTitle = document.title;
+      let scrollIndex = 0;
+
+      function scrollTitle() {
+        document.title = originalTitle.substring(scrollIndex) + " " + originalTitle.substring(0, scrollIndex);
+        scrollIndex = (scrollIndex + 0.01) % originalTitle.length;
+        setTimeout(scrollTitle, 0);
+      }
+
+      scrollTitle();
+    });
+  </script>
+
 </head>
 <body>
   <div>
