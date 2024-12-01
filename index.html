@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to my work space. This is a very long title that needs to scroll smoothly.</title>
   <link rel="icon" type="image/png" href="/image/weblogo.png">
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: ghostwhite;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      width: 150px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    table {
+      width: auto;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      text-align: left;
+      table-layout: fixed;
+    }
+  </style>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -22,27 +61,48 @@
   </script>
 
 </head>
-<body>
-  <div>
 
+<body>
+
+  <div class="container">
+    <div style="background-color:#FFF4A3; float: left; height: 100%; padding-bottom: 100%; padding-righ: 5%;">
+      <ul>
+        <li><a href="work1.html">งานที่ 1</a></li>
+      </ul>
+    </div>
+
+
+
+    <div style="background-color:#D9EEE1;">
+      <table>
+        <tr>
+          <th>
+            <a href="index.html">
+              <img src="/image/images.jpg" height="140px" width="115px">
+            </a>
+          </th>
+          <th width="100%">
+            <div style="margin-left: 10px;">
+              <h1>วิชา SC310006 Mobile and Web Application Development </h1>
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+              </ul>
+            </div>
+          </th>
+        </tr>
+      </table>
+    </div>
 
 
   </div>
-  <a href="index.html" >
-    <img src="/image/images.jpg" style="float: left;" height="10%" width="9%">
-  </a>
-
-
-  <h1>วิชา SC310006 Mobile and Web Application Development </h1>
-  <ul>
-    <li><a href="work1.html">งานที่ 1</a></li>
-  </ul>
- 
-  <h1>653380201-2 ธนวัฒน์ ถนัดค้า</h1>
-  <p>Email : <a href="mailto:tanawat.tan@kkumail.com" title="Please contact me for more information.">tanawat.tan@kkumail.com</a></p>
-  
-  
-
+  <div style="position: absolute; bottom: 0; margin-left: 5%;">
+    <h1>653380201-2 ธนวัฒน์ ถนัดค้า</h1>
+    <p>Email : <a href="mailto:tanawat.tan@kkumail.com"
+        title="Please contact me for more information.">tanawat.tan@kkumail.com</a></p>
+  </div>
 
 </body>
 
