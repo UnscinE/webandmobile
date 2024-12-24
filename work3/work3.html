@@ -38,7 +38,7 @@
             <h1 class="pa-4 bg-primary" style="text-align: center;">แบบทดสอบ</h1>
 
             <div v-if="page==1" style="text-align: center; margin-top: 2%;">
-                <v-btn @click="page=2" style="text-align: center; background-color: aquamarine; color: rgb(0, 133, 250);">เริ่มทำแบบทดสอบ</v-btn>
+                <v-btn @click="page=3" style="text-align: center; background-color: aquamarine; color: rgb(0, 133, 250);">เริ่มทำแบบทดสอบ</v-btn>
             </div>
 
             <div v-if="page==2">
@@ -100,15 +100,9 @@
             },
             methods: {
                 async load_data() {
-    try {
-        const res = await fetch("quiz2.json");
-        if (!res.ok) throw new Error("Failed to fetch quiz data.");
-        this.qlist = await res.json();
-    } catch (error) {
-        console.error(error);
-        alert("Unable to load quiz data. Please try again later.");
-    }
-},
+                    var res = await fetch("quiz2.json");
+                    this.qlist = await res.json();
+                },
                 validate() {
                     for (let a in this.qlist) {
                         if (!this.answers[a]) return false;
