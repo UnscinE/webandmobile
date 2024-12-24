@@ -100,9 +100,15 @@
             },
             methods: {
                 async load_data() {
-                    var res = await fetch("quiz2.json");
-                    this.qlist = await res.json();
-                },
+    try {
+        const res = await fetch("quiz2.json");
+        if (!res.ok) throw new Error("Failed to fetch quiz data.");
+        this.qlist = await res.json();
+    } catch (error) {
+        console.error(error);
+        alert("Unable to load quiz data. Please try again later.");
+    }
+},
                 validate() {
                     for (let a in this.qlist) {
                         if (!this.answers[a]) return false;
