@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facebook-like UI</title>
+  <title>Wellcome to my Workspace</title>
   <link rel="icon" type="image/png" href="image/weblogo.png">
 
   <!-- Bootstrap CSS -->
@@ -87,10 +87,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#" style="">
         <img src="image/weblogo.png" alt="Logo">
       </a>
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Friends</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
@@ -116,7 +116,8 @@
       <div class="col-md-6 feed">
         <div class="feed-card">
           <div class="feed-card-header">
-            <strong>User Name</strong>
+            <strong class="user-name">User Name</strong>
+
             <small class="text-muted">2 hours ago</small>
           </div>
           <div class="feed-card-body">
@@ -124,14 +125,15 @@
             <img src="image/imagework1.png" alt="Sample Post" class="img-fluid rounded">
           </div>
           <div class="feed-card-footer">
-            <a href="work1/work1.html" class="text-primary">Like</a> · 
-            <a href="work1/work1.html" class="text-primary">Comment</a> · 
+            <a href="work1/work1.html" class="text-primary">Like</a> ·
+            <a href="work1/work1.html" class="text-primary">Comment</a> ·
             <a href="work1/work1.html" class="text-primary">Share</a>
           </div>
         </div>
         <div class="feed-card">
           <div class="feed-card-header">
-            <strong>User Name</strong>
+            <strong class="user-name">User Name</strong>
+
             <small class="text-muted">2 hours ago</small>
           </div>
           <div class="feed-card-body">
@@ -139,14 +141,15 @@
             <img src="image/imagework2.png" alt="Sample Post" class="img-fluid rounded">
           </div>
           <div class="feed-card-footer">
-            <a href="work2/work2.html" class="text-primary">Like</a> · 
-            <a href="work2/work2.html" class="text-primary">Comment</a> · 
+            <a href="work2/work2.html" class="text-primary">Like</a> ·
+            <a href="work2/work2.html" class="text-primary">Comment</a> ·
             <a href="work2/work2.html" class="text-primary">Share</a>
           </div>
         </div>
         <div class="feed-card">
           <div class="feed-card-header">
-            <strong>User Name</strong>
+            <strong class="user-name">User Name</strong>
+
             <small class="text-muted">2 hours ago</small>
           </div>
           <div class="feed-card-body">
@@ -154,8 +157,8 @@
             <img src="image/imagework3.png" alt="Sample Post" class="img-fluid rounded">
           </div>
           <div class="feed-card-footer">
-            <a href="work3/work3.html" class="text-primary">Like</a> · 
-            <a href="work3/work3.html" class="text-primary">Comment</a> · 
+            <a href="work3/work3.html" class="text-primary">Like</a> ·
+            <a href="work3/work3.html" class="text-primary">Comment</a> ·
             <a href="work3/work3.html" class="text-primary">Share</a>
           </div>
         </div>
@@ -164,9 +167,10 @@
       <!-- Right Sidebar -->
       <div class="col-md-3 sidebar">
         <h4>Contacts</h4>
-        <a href="#">Friend 1</a>
-        <a href="#">Friend 2</a>
-        <a href="#">Friend 3</a>
+        <a href="https://github.com/PhattaraphonTonsawan">Phattaraphon</a>
+        <a href="https://github.com/TheTable1">Florence</a>
+        <a href="https://github.com/ssiriyakorn">ssiriyakorn
+        </a>
       </div>
     </div>
   </div>
@@ -178,6 +182,21 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+    const currentURL = window.location.href;
+
+    const firstDotIndex = currentURL.indexOf('.');
+
+    const result = firstDotIndex !== -1 ? currentURL.substring(0, firstDotIndex) : currentURL;
+
+    const userNames = document.querySelectorAll('.user-name');
+
+    userNames.forEach((element, index) => {
+      element.textContent = result;
+    });
+  </script>
 </body>
 
 </html>
