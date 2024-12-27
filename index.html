@@ -185,11 +185,17 @@
 
   <script>
 
-    const currentURL = window.location.href;
+const currentURL = window.location.href;
 
-    const firstDotIndex = currentURL.indexOf('.');
+// ลบ 'https://' ออกจาก URL
+const urlWithoutProtocol = currentURL.replace('https://', '');
 
-    const result = firstDotIndex !== -1 ? currentURL.substring(0, firstDotIndex) : currentURL;
+// หาตำแหน่งของ '.' ตัวแรก
+const firstDotIndex = urlWithoutProtocol.indexOf('.');
+
+// ตัด URL ตั้งแต่จุดเริ่มต้นจนถึง '.' ตัวแรก
+const result = firstDotIndex !== -1 ? urlWithoutProtocol.substring(0, firstDotIndex) : urlWithoutProtocol;
+
 
     const userNames = document.querySelectorAll('.user-name');
 
