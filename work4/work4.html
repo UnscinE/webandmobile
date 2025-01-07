@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Introducing myself using a-frame</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+  <a-scene>
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      <a-asset-item id="pikachuModel" src="/work4/src/furry_2b_nier_automata_free.glb"></a-asset-item>
+      <a-asset-item id="mewtwoModel" src="/work4/src/2b_jump.glb"></a-asset-item>
+      <a-asset-item id="mewtreeModel" src="/work4/src/2b_nier_automata.glb"></a-asset-item>
+      <a-asset-item id="mewfourModel" src="/work4/src/chibi_2b.glb"></a-asset-item>
+    </a-assets>
+    <a-light type="directional" position="0 5 5" intensity="1"></a-light>
+    <a-light type="ambient" color="#ffffff"></a-light>
+
+    <a-sky color="#85D4E2"></a-sky>
+
+    <a-plane rotation="-90 0 0" height="100" width="100" color="#7AD678"></a-plane>
+
+    <a-circle color="#ffffff" radius="10" rotation="-90 0 0" position="0 0.1 0"></a-circle>
+
+    <a-circle color="#E3350D" radius="8.8" rotation="-90 0 0" position="0 0.15 0"
+      geometry="thetaStart: 0; thetaLength: 180">
+    </a-circle>
+
+    <a-box position="0 0.2 0" depth="0.3" height="0.1" width="17" color="#000000">
+    </a-box>
+
+    <a-ring color="#000000" radius-inner="8.5" radius-outer="9" rotation="-90 0 0" position="0 0.2 0"></a-ring>
+
+    <a-circle color="#ffffff" radius="2" rotation="-90 0 0" position="0 0.25 0"></a-circle>
+    <a-circle color="#ffffff" radius="2" rotation="-90 0 0" position="0 0.26 0"></a-circle>
+
+    <a-ring color="#000000" radius-inner="1.8" radius-outer="2" rotation="-90 0 0" position="0 0.3 0"></a-ring>
+
+    <a-entity gltf-model="#pikachuModel" position="0 0.2 -5" scale="0.02 0.02 0.02"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-entity>
+    <a-entity gltf-model="#mewtwoModel" position="4 0.1 -5" scale="0.02 0.02 0.02" rotation="0 -45 0"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-entity>
+
+    <a-entity gltf-model="#mewtreeModel" position="-4 3.1 -5" scale="15 15 15"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-entity>
+
+    <a-entity gltf-model="#mewfourModel" position="6 0.2 -3" scale="2 2 2"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
+
+    <a-entity position="0 0.5 0">
+
+      <a-box position="0 0 25" width="50" height="1" depth="0.5" color="#ffffff"></a-box>
+
+      <a-box position="0 0 -25" width="50" height="1" depth="0.5" color="#ffffff"></a-box>
+
+      <a-box position="-25 0 0" width="0.5" height="1" depth="19" color="#ffffff"></a-box>
+
+      <a-box position="25 0 0" width="0.5" height="1" depth="19" color="#ffffff"></a-box>
+
+      <a-box position="25 0 25" width="0.5" height="1" depth="9.5" rotation="0 45 0" color="#ffffff"></a-box>
+
+      <a-box position="-25 0 25" width="0.5" height="1" depth="9.5" rotation="0 -45 0" color="#ffffff"></a-box>
+
+      <a-box position="25 0 -25" width="0.5" height="1" depth="9.5" rotation="0 -45 0" color="#ffffff"></a-box>
+
+      <a-box position="-25 0 -25" width="0.5" height="1" depth="9.5" rotation="0 45 0" color="#ffffff"></a-box>
+    </a-entity>
+
+    <a-text position="0 5 -6" value="653380201-2 Tanawat Tanatka" color="#ffffff" align="center" width="10"></a-text>
+  </a-scene>
+
+</body>
+
+</html>
