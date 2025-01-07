@@ -13,6 +13,7 @@
   <a-scene>
     <a-assets>
       <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      <img id="myimage" src="src/IMG_0033 (1) (1).jpg">
       <a-asset-item id="pikachuModel" src="src/furry_2b_nier_automata_free.glb"></a-asset-item>
       <a-asset-item id="mewtwoModel" src="src/2b_jump.glb"></a-asset-item>
       <a-asset-item id="mewtreeModel" src="src/2b_nier_automata.glb"></a-asset-item>
@@ -55,26 +56,33 @@
     <a-entity gltf-model="#mewfourModel" position="6 0.2 -3" scale="2 2 2"
       animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
 
-    <a-entity position="0 0.5 0">
+      <a-entity position="0 0.5 0">
+        <a-box position="0 0 25" width="50" height="1" depth="0.5" color="#ffffff"></a-box>
+        <a-box position="0 0 -25" width="50" height="1" depth="0.5" color="#ffffff"></a-box>
+        <a-box position="-25 0 0" width="0.5" height="1" depth="19" color="#ffffff"></a-box>
+        <a-box position="25 0 0" width="0.5" height="1" depth="19" color="#ffffff"></a-box>
+        <a-box position="25 0 25" width="0.5" height="1" depth="9.5" rotation="0 45 0" color="#ffffff"></a-box>
+        <a-box position="-25 0 25" width="0.5" height="1" depth="9.5" rotation="0 -45 0" color="#ffffff"></a-box>
+        <a-box position="25 0 -25" width="0.5" height="1" depth="9.5" rotation="0 -45 0" color="#ffffff"></a-box>
+        <a-box position="-25 0 -25" width="0.5" height="1" depth="9.5" rotation="0 45 0" color="#ffffff"></a-box>
+      </a-entity>
 
-      <a-box position="0 0 25" width="50" height="1" depth="0.5" color="#ffffff"></a-box>
+    <a-cone position="-3 3 2" radius-bottom="1.5" radius-top="0" height="4" color="#2C6B2F"></a-cone>
+    <a-box position="-3 0 2" width="0.5" height="2" depth="0.5" color="#8B4513"></a-box>
 
-      <a-box position="0 0 -25" width="50" height="1" depth="0.5" color="#ffffff"></a-box>
+    <a-cone position="3 3 2" radius-bottom="1.5" radius-top="0" height="4" color="#2C6B2F"></a-cone>
+    <a-box position="3 0 2" width="0.5" height="2" depth="0.5" color="#8B4513"></a-box>
 
-      <a-box position="-25 0 0" width="0.5" height="1" depth="19" color="#ffffff"></a-box>
-
-      <a-box position="25 0 0" width="0.5" height="1" depth="19" color="#ffffff"></a-box>
-
-      <a-box position="25 0 25" width="0.5" height="1" depth="9.5" rotation="0 45 0" color="#ffffff"></a-box>
-
-      <a-box position="-25 0 25" width="0.5" height="1" depth="9.5" rotation="0 -45 0" color="#ffffff"></a-box>
-
-      <a-box position="25 0 -25" width="0.5" height="1" depth="9.5" rotation="0 -45 0" color="#ffffff"></a-box>
-
-      <a-box position="-25 0 -25" width="0.5" height="1" depth="9.5" rotation="0 45 0" color="#ffffff"></a-box>
-    </a-entity>
+    <a-cone position="-5 3 -3" radius-bottom="1.5" radius-top="0" height="4" color="#2C6B2F"></a-cone>
+    <a-box position="-5 0 -3" width="0.5" height="2" depth="0.5" color="#8B4513"></a-box>
 
     <a-text position="0 5 -6" value="653380201-2 Tanawat Tanatka" color="#ffffff" align="center" width="10"></a-text>
+    <a-image src="#myimage" position="0 6.5 -6"></a-image>
+    <a-image src="#myimage" position="2 6.5 6"></a-image>
+    <a-image src="#myimage" position="-5 6.5 0"></a-image>
+    <a-image src="#myimage" position="1 6.5 -7"></a-image>
+    <a-image src="#myimage" position="0 6.5 -3"></a-image>
+    <a-image src="#myimage" position="0 6.5 -6"></a-image>
   </a-scene>
 
 </body>
