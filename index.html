@@ -192,6 +192,23 @@
           </div>
         </div>
 
+        <div class="feed-card">
+          <div class="feed-card-header">
+            <strong class="user-name">User Name</strong>
+
+            <small class="text-muted">7/2/2025</small>
+          </div>
+          <div class="feed-card-body">
+            <p>Just posted work 6 Check it out!</p>
+            <img src="image/imagework6.png" alt="Sample Post" class="img-fluid rounded">
+          </div>
+          <div class="feed-card-footer">
+            <a href="work5/work6.html" class="text-primary">Work 6.1</a>
+            <a href="work5/work6_vue.html" class="text-primary">Work 6.2</a>
+            <a href="work5/work6.html" class="text-primary">Share</a>
+          </div>
+        </div>
+
       </div>
 
       <div class="col-md-3 sidebar">
@@ -214,13 +231,8 @@
 
 const currentURL = window.location.href;
 
-// ลบ 'https://' ออกจาก URL
 const urlWithoutProtocol = currentURL.replace('https://', '');
-
-// หาตำแหน่งของ '.' ตัวแรก
 const firstDotIndex = urlWithoutProtocol.indexOf('.');
-
-// ตัด URL ตั้งแต่จุดเริ่มต้นจนถึง '.' ตัวแรก
 const result = firstDotIndex !== -1 ? urlWithoutProtocol.substring(0, firstDotIndex) : urlWithoutProtocol;
 
     const userNames = document.querySelectorAll('.user-name');
